@@ -1,0 +1,96 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root{
+    --purple: #5280E2;
+    --green: #15CDCB;
+    --bgdark: #212226;
+    --gray: #E0DEDE;
+
+    --menuHeigth: 65px;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    background-color: var(--bgdark);
+    color: white;
+}
+
+body, button, select, text area{
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    font-size: 44px;
+}
+
+h2{
+    font-size: 24px;
+}
+
+h1, h2{
+    margin: 0;
+    font-weight: 400;
+}
+
+button{
+    margin-top: 40px;
+    padding: 8px 35px;
+    background-color: var(--purple);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+header{
+    height: calc(100vh - 65px);
+    display: flex;
+    align-items: center;
+}
+
+header .header-container{
+    width: 50vw;
+    height: fit-content;
+    padding: 0 100px;
+}
+
+header .header-container h1{
+    color: var(--green);
+}
+
+header .header-container h2, p{
+    color: var(--gray);
+}
+
+nav{
+    display: flex;
+    height: var(--menuHeigth);
+    position: sticky;
+    top: 0;
+    padding: 0 100px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bgdark);
+}
+
+nav img{
+    height: 45px;
+}
+
+nav ul a{
+    margin: 0 20px;
+    font-size: 22px;
+    color: var(--green);
+    text-decoration: none;
+}
+
+section{
+    height: 1520px;
+    background-color: #5280E2;
+}
