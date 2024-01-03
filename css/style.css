@@ -99,6 +99,10 @@ nav ul a{
     text-decoration: none;
 }
 
+nav ul a svg{
+    display: none;
+}
+
 section{
     height: 1520px;
     background-color: #5280E2;
@@ -145,5 +149,18 @@ section{
 @media (max-width: 480px){
     header .header-container{
         padding: 0 40px;
+    }
+
+    nav{
+        padding: 0 15px;
+    }
+
+    nav ul a{
+        font-size: 12px;
+    }
+
+    nav ul a svg{
+        display: block;
+        margin: 0 auto 10px;
     }
 }
