@@ -60,6 +60,10 @@ header .header-container{
     padding: 0 100px;
 }
 
+header .header-container img{
+    display: none;
+}
+
 header .header-container h1{
     color: var(--green);
 }
@@ -83,8 +87,13 @@ nav img{
     height: 45px;
 }
 
+nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly; /*MELHOR DO QUE COLOCAR UMA MARGEM*/
+}
+
 nav ul a{
-    margin: 0 20px;
     font-size: 22px;
     color: var(--green);
     text-decoration: none;
@@ -93,4 +102,48 @@ nav ul a{
 section{
     height: 1520px;
     background-color: #5280E2;
+}
+
+/*RESPONSIVIDADE*/
+
+@media (max-width: 1000px){ /*TUDO O QUE ESTA SENDO FEITO AQUI, VAI SERVIR PRA BAIXO TAMBEM*/
+    header .header-container{
+        width: 100%;
+    }
+
+    nav{
+        padding: 0 30px;
+    }
+
+
+    nav ul a{
+        font-size: 18px;
+    }
+}
+
+/*RESPONSIVIDADE DE TABLET. TUDO O QUE ESTIVER ACIMA VAI SER A DE DESKTOP*/
+@media (max-width: 767px) {
+
+    header .header-container img{
+        display: inline;
+        margin-bottom: 70px;
+    }
+
+    nav img{
+        display: none;
+    }
+
+    nav ul{
+        padding: 0;
+    }
+
+    nav ul a{
+        font-size: 16px;
+    }
+}
+/*CELULAR*/
+@media (max-width: 480px){
+    header .header-container{
+        padding: 0 40px;
+    }
 }
