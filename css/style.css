@@ -36,6 +36,14 @@ h1, h2{
     font-weight: 400;
 }
 
+.title-green{
+    color: var(--green);
+}
+
+.text-gray{
+    color: var(--gray);
+}
+
 button{
     margin-top: 40px;
     padding: 8px 35px;
@@ -62,14 +70,6 @@ header .header-container{
 
 header .header-container img{
     display: none;
-}
-
-header .header-container h1{
-    color: var(--green);
-}
-
-header .header-container h2, p{
-    color: var(--gray);
 }
 
 nav{
@@ -103,11 +103,24 @@ nav ul a svg{
     display: none;
 }
 
-section{
-    height: 1520px;
-    background-color: #5280E2;
+.sobre-mim{
+      display: flex;
+      padding: 100px;
 }
 
+.sobre-mim .section-img{ /*DEFININDO O TAMANHO DO CONTAINER DA IMAGEM*/
+    width: 50%;
+    text-align: center; /*centralizando a imagem*/
+}
+
+.sobre-mim .sobre-container{
+    width: 50%;
+    padding-right: 50px;
+}
+
+.sobre-mim .section-img img{/*DEFINNINDO O TAMANHO DA IMAGEM*/
+    width: 60%;
+}
 /*RESPONSIVIDADE*/
 
 @media (max-width: 1000px){ /*TUDO O QUE ESTA SENDO FEITO AQUI, VAI SERVIR PRA BAIXO TAMBEM*/
