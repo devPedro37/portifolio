@@ -122,6 +122,7 @@ nav ul a svg{
 .sobre-mim .section-img img{/*DEFINNINDO O TAMANHO DA IMAGEM*/
     width: 60%;
     height: 100%;
+    object-fit: cover;
     border-radius: 5px;
 }
 .sobre-mim .section-img .linha{
@@ -152,6 +153,23 @@ nav ul a svg{
     nav ul a{
         font-size: 18px;
     }
+
+    .sobre-mim{
+        flex-direction: column; /*PRA IMAGEM FICAR ABAIXO DO TEXTO*/
+    }
+
+    .sobre-mim .sobre-container, .sobre-mim .section-img{
+        width: 100%;/*PERMITIR QUE CADA UM OCUPASSE TODO O ESPAÇO*/
+    }
+
+    .sobre-mim .sobre-container{
+        padding-right: 0;
+    }
+
+    .sobre-mim .section-img{
+        margin: 70px 0;/*DAR ESPAÇO DAS LINHAS PARA NÃO PASSAREM POR CIMA DO TEXTO*/
+    }
+    
 }
 
 /*RESPONSIVIDADE DE TABLET. TUDO O QUE ESTIVER ACIMA VAI SER A DE DESKTOP*/
@@ -186,6 +204,7 @@ nav ul a svg{
         padding: 0 15px;
         top: unset; /*POIS NA RESPONSIVIDADE DE DESKTOP ELE ESTÁ SETADO, ENTÃO PRECISO DIZER QUE AQUI ELE AINDA NÃO FOI DEFINIDO PARA O BOTTOM FUNCIONAR*/
         bottom: 0;
+        z-index: 99;/*ADICIONADO POIS A IMAGEM NA RESOLUCAO DE CELULAR ESTAVA PASSANDO POR CIMA DO NAV DE CELULAR, E O Z-INDEX TORNA O NAV MAIS IMPORTANTE*/
     }
 
     nav ul a{
@@ -195,5 +214,9 @@ nav ul a svg{
     nav ul a svg{
         display: block;
         margin: 0 auto 10px;
+    }
+
+    .sobre-mim{
+        padding: 40px;
     }
 }
