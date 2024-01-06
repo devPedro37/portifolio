@@ -2,10 +2,10 @@
 
 :root{
     --purple: #5280E2;
-    --green: #15CDCB;
+    --green: #15cdcb;
     --bgdark: #212226;
     --gray: #E0DEDE;
-
+    --cardBlack: #2F3034;
     --menuHeigth: 65px;
 }
 
@@ -81,6 +81,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     background-color: var(--bgdark);
+    z-index: 99;
 }
 
 nav img{
@@ -138,6 +139,44 @@ nav ul a svg{
     transform: rotate(-3.3deg);
     color: var(--green);
 }
+
+.servicos{
+    margin: 150px 0;
+    padding: 0 100px;
+    text-align: center;
+}
+
+.servicos-container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;/*NECESSARIO PARA QUE O ESPACAMENTO DOS CARDS NAO FICASSEM MUITO LARGOS*/
+    margin: 60px auto 0; /*ALINHAMENTO DO CARD, POIS COM O MAX WIDTH ELE FICAVA AO LADO*/
+}
+
+.servicos .servicos-container .servicos-card{
+    max-width: 360px;/*LARGURA MAXIMA PARA MONITORES DE 1200PX*/
+    display: flex;/*PARA ALINHAR O CONTEUDO DO CARD UM ABAIXO DO OUTRO*/
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;/*ALINHAR AS IMAGENS DO CARD NO CENTER*/
+    padding: 60px 25px;
+    background-color: var(--cardBlack);
+    border: 1px solid var(--purple);
+    border-radius: 16px;
+    
+}
+
+.servicos .servicos-container .servicos-card img{
+    width: 90px;
+    margin: 15px 0 40px;
+}
+
+.servicos-card + .servicos-card /*SELETOR IRMAO, QUANDO EU TIVER UMA CLASSE SEGUIDA DA OUTRA, O QUE TIVER DENTRO SERA APLICADO NO SEGUNDO*/{ 
+
+    margin-left: 10px;
+}
+
 /*RESPONSIVIDADE*/
 
 @media (max-width: 1000px){ /*TUDO O QUE ESTA SENDO FEITO AQUI, VAI SERVIR PRA BAIXO TAMBEM*/
@@ -168,6 +207,22 @@ nav ul a svg{
 
     .sobre-mim .section-img{
         margin: 70px 0;/*DAR ESPAÇO DAS LINHAS PARA NÃO PASSAREM POR CIMA DO TEXTO*/
+    }
+
+    .servicos{
+        padding: 0;
+    }
+
+    .servicos .servicos-container{
+        flex-direction: column;/*DEIXANDO ELES COMO COLUNA*/
+        align-items: center;/*CENTRALIZANDO ELES*/
+        flex-wrap: wrap;/*FAZ COM QUE OS CARDS QUBREM AUTOMATICAMENTE*/
+    }
+
+    .servicos-card + .servicos-card /*SELETOR IRMAO, QUANDO EU TIVER UMA CLASSE SEGUIDA DA OUTRA, O QUE TIVER DENTRO SERA APLICADO NO SEGUNDO*/{ 
+
+        margin-left: 0px;/*TIRANDO A MARGEM LATERAL*/
+        margin-top: 30px;/*ADICIONANDO UMA MARGEM PARA CIMA, PARA SEPARAR ELES*/
     }
     
 }
@@ -218,5 +273,13 @@ nav ul a svg{
 
     .sobre-mim{
         padding: 40px;
+    }
+
+    .servicos{
+        margin: 70px 0;
+    }
+
+    .servicos-container{
+        padding: 0 20px;
     }
 }
